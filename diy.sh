@@ -11,12 +11,27 @@ function git_sparse_clone() {
 }
 
 # Add packages
-git clone https://github.com/Zxilly/UA2F.git package/UA2F
+#git clone https://github.com/Zxilly/UA2F.git package/UA2F
+git clone https://github.com/CHN-beta/rkp-ipid.git package/rkp-ipid
 
 echo "
 # 插件
+
+# schoolnet
+# UA2F 模块
 CONFIG_PACKAGE_ua2f=y
 CONFIG_PACKAGE_luci-app-ua2f=y
+# RKP-IPID 模块
+CONFIG_PACKAGE_kmod-rkp-ipid=y
+CONFIG_PACKAGE_iptables-mod-u32=y
+CONFIG_PACKAGE_iptables-mod-filter=y
+# 防 TTL 检测
+CONFIG_PACKAGE_iptables-mod-ipopt=y
+CONFIG_PACKAGE_kmod-ipt-ipopt=y
+# 其它依赖
+CONFIG_PACKAGE_ipset=y
+CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
+
 " >> .config
 
 # 修改默认IP
