@@ -34,6 +34,11 @@ CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
 
 " >> .config
 
+echo "
+# UA2F前置设置
+CONFIG_NETFILTER_NETLINK_GLUE_CT=y
+" >> target/linux/ramips/mt7621/config-5.4
+
 # 修改默认IP
 sed -i 's/192.168.1.1/192.168.8.1/g' package/base-files/files/bin/config_generate
 
