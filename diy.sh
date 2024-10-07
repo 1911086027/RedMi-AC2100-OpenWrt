@@ -19,8 +19,8 @@ echo "
 
 # schoolnet
 # UA2F 模块
-CONFIG_PACKAGE_ua2f=y
-CONFIG_PACKAGE_luci-app-ua2f=y
+#CONFIG_PACKAGE_ua2f=y
+#CONFIG_PACKAGE_luci-app-ua2f=y
 # RKP-IPID 模块
 CONFIG_PACKAGE_kmod-rkp-ipid=y
 CONFIG_PACKAGE_iptables-mod-u32=y
