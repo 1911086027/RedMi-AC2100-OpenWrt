@@ -11,7 +11,8 @@ function git_sparse_clone() {
 }
 
 # Add packages
-#git clone https://github.com/Zxilly/UA2F.git package/UA2F
+git clone https://github.com/Zxilly/UA2F.git package/UA2F
+git clone https://github.com/lucikap/luci-app-ua2f.git package/luci-app-ua2f
 git clone https://github.com/CHN-beta/rkp-ipid.git package/rkp-ipid
 
 echo "
@@ -19,8 +20,8 @@ echo "
 
 # schoolnet
 # UA2F 模块
-#CONFIG_PACKAGE_ua2f=y
-#CONFIG_PACKAGE_luci-app-ua2f=y
+CONFIG_PACKAGE_ua2f=y
+CONFIG_PACKAGE_luci-app-ua2f=y
 # RKP-IPID 模块
 CONFIG_PACKAGE_kmod-rkp-ipid=y
 CONFIG_PACKAGE_iptables-mod-u32=y
